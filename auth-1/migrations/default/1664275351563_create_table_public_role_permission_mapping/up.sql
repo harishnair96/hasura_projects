@@ -1,0 +1,1 @@
+CREATE TABLE "public"."role_permission_mapping" ("id" serial NOT NULL, "role" text NOT NULL, "permission" text NOT NULL, PRIMARY KEY ("id") , FOREIGN KEY ("permission") REFERENCES "public"."permission"("permission") ON UPDATE restrict ON DELETE restrict, FOREIGN KEY ("role") REFERENCES "public"."role"("role") ON UPDATE restrict ON DELETE restrict, UNIQUE ("id"));

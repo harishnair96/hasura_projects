@@ -1,0 +1,12 @@
+table:
+  name: permission
+  schema: public
+is_enum: true
+array_relationships:
+  - name: role_permission_mappings
+    using:
+      foreign_key_constraint_on:
+        column: permission
+        table:
+          name: role_permission_mapping
+          schema: public

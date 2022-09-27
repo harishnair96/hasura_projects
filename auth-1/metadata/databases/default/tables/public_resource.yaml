@@ -1,0 +1,78 @@
+table:
+  name: resource
+  schema: public
+insert_permissions:
+  - role: user
+    permission:
+      check:
+        _exists:
+          _table:
+            name: user
+            schema: public
+          _where:
+            _and:
+              - id:
+                  _eq: X-Hasura-User-Id
+              - userRole:
+                  permissions:
+                    permission:
+                      _eq: write
+      columns:
+        - id
+        - val
+select_permissions:
+  - role: user
+    permission:
+      columns:
+        - id
+        - val
+      filter:
+        _exists:
+          _table:
+            name: user
+            schema: public
+          _where:
+            _and:
+              - id:
+                  _eq: X-Hasura-User-Id
+              - userRole:
+                  permissions:
+                    permission:
+                      _eq: read
+update_permissions:
+  - role: user
+    permission:
+      columns:
+        - id
+        - val
+      filter:
+        _exists:
+          _table:
+            name: user
+            schema: public
+          _where:
+            _and:
+              - id:
+                  _eq: X-Hasura-User-Id
+              - userRole:
+                  permissions:
+                    permission:
+                      _eq: write
+      check: null
+delete_permissions:
+  - role: user
+    permission:
+      backend_only: false
+      filter:
+        _exists:
+          _table:
+            name: user
+            schema: public
+          _where:
+            _and:
+              - id:
+                  _eq: X-Hasura-User-Id
+              - userRole:
+                  permissions:
+                    permission:
+                      _eq: delete
