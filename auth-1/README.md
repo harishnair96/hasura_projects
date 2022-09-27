@@ -6,6 +6,17 @@ This project demonstrates how Hasura's authorization system can be used in situa
 where the information related to user roles and permission allowed for each of
 those roles are stored in the database itself.
 
+## Running the project
+
+1. Run `docker compose up -d`
+2. Run -
+  ```
+  hasura metadata apply
+  hasura migrate apply --all-databases
+  hasura metadata reload
+  ```
+3. Go to the endpoint <http://localhost:8080/console>
+
 ## Setup
 
 This project is setup as follows. This project contains the following tables -
