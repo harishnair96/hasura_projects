@@ -1,3 +1,9 @@
 table:
   name: users
   schema: public
+computed_fields:
+  - name: friends
+    definition:
+      function:
+        name: get_friends
+        schema: public
