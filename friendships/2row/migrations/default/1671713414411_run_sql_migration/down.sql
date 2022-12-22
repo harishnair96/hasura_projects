@@ -1,0 +1,11 @@
+-- Could not auto-generate a down migration.
+-- Please write an appropriate down migration for the SQL below:
+-- INSERT INTO "public"."users"("id", "name") VALUES (1, E'John');
+-- INSERT INTO "public"."users"("id", "name") VALUES (2, E'Dustin');
+-- INSERT INTO "public"."users"("id", "name") VALUES (3, E'Justin');
+-- INSERT INTO "public"."users"("id", "name") VALUES (4, E'Charles');
+-- INSERT INTO "public"."users"("id", "name") VALUES (5, E'Miesha');
+-- INSERT INTO "public"."users"("id", "name") VALUES (6, E'Ronda');
+-- INSERT INTO "public"."friendships"("user1_id", "user2_id") VALUES (1, 2);
+-- INSERT INTO "public"."friendships"("user1_id", "user2_id") VALUES (1, 3);
+-- INSERT INTO "public"."friendships"("user1_id", "user2_id") VALUES (2, 3);

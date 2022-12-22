@@ -1,0 +1,5 @@
+-- Could not auto-generate a down migration.
+-- Please write an appropriate down migration for the SQL below:
+-- INSERT INTO "public"."friendships"("user1_id", "user2_id") VALUES (2, 1);
+-- INSERT INTO "public"."friendships"("user1_id", "user2_id") VALUES (3, 1);
+-- INSERT INTO "public"."friendships"("user1_id", "user2_id") VALUES (3, 2);
