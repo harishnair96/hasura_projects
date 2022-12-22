@@ -1,0 +1,1 @@
+CREATE TABLE "public"."friendships" ("user1_id" integer NOT NULL, "user2_id" integer NOT NULL, PRIMARY KEY ("user1_id","user2_id") , FOREIGN KEY ("user1_id") REFERENCES "public"."users"("id") ON UPDATE restrict ON DELETE restrict, FOREIGN KEY ("user2_id") REFERENCES "public"."users"("id") ON UPDATE restrict ON DELETE restrict);
